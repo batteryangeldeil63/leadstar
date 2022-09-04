@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Cabecalho from "./components/Cabecalho";
+import Chamada from "./components/Chamada";
+import Container from "./components/Container";
+import Footer from "./components/Footer";
+import Formulario from "./components/Formulario";
+import GlobalStyle from "./components/GlobalStyle";
+import LayoutSite from "./components/LayoutSite";
+import Livro from "./components/Livro";
+import TextoChamada from "./components/TextoChamada";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyle />
+      <LayoutSite>
+        <Cabecalho namebook='Como fazer amigos e Influenciar pessoas'/>
+        <Container>
+          <Livro />
+          <Chamada>
+            <TextoChamada/>
+            <Formulario/>
+          </Chamada>
+        </Container>
+        <Footer />
+      </LayoutSite>
     </div>
   );
 }
